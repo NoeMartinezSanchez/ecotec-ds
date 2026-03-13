@@ -1,0 +1,14 @@
+# Herramientas de agentes IA
+.agents/
+.opencode/
+
+# Archivos de configuración internos
+AGENTS.md
+skills-lock.json
+estructura_proyecto.txt
+
+# Scripts de utilidad
+generate_tree.py
+
+# Documentos privados
+DOSSIER CORPORATIVO 2026.pdf
