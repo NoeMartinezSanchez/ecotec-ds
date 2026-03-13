@@ -1,4 +1,4 @@
-# sitec-ti.gt.tc — Sitio Web Corporativo
+# ECOTEC DS — Sitio Web Corporativo
 
 Sitio web institucional desarrollado con HTML, CSS y JavaScript.
 
