@@ -755,6 +755,20 @@ footer {
     font-weight: bold;
 }
 
+.form-notice {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    font-size: 0.9rem;
+}
+
+.form-notice p {
+    margin: 0;
+}
+
 .btn-submit:disabled {
     opacity: 0.7;
     cursor: not-allowed;
