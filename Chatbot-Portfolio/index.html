@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ECOTEC Data Solutions · Chatbots IA · Soluciones a tu medida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            font-family: 'Inter', sans-serif;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .menu-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        .header-menu {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.6s ease-out;
+        }
+        .header-menu h1 {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .header-menu p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+        .cards-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .menu-card {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 1.8rem;
+            padding: 2rem 1.8rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(71,85,105,0.5);
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .menu-card:hover {
+            transform: translateY(-10px);
+            border-color: #3b82f6;
+            background: rgba(255,255,255,0.1);
+            box-shadow: 0 20px 30px -15px rgba(0,0,0,0.4);
+        }
+        .menu-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .menu-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+            color: white;
+        }
+        .menu-card p {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        .badge-perfil {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .badge-pyme { background: #3b82f6; color: white; }
+        .badge-intermedio { background: #f59e0b; color: #1e293b; }
+        .badge-empresarial { background: #ef4444; color: white; }
+        .btn-menu {
+            background: #3b82f6;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 2rem;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        .menu-card:hover .btn-menu {
+            background: #60a5fa;
+            transform: scale(1.02);
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .footer-menu {
+            text-align: center;
+            margin-top: 3rem;
+            color: #64748b;
+            font-size: 0.8rem;
+        }
+        @media (max-width: 900px) {
+            body { padding: 1rem; }
+            .header-menu h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="menu-container">
+    <div class="header-menu">
+        <h1><i class="fas fa-robot"></i> ECOTEC Data Solutions</h1>
+        <p>Elige la solución que mejor se adapte a tu negocio</p>
+    </div>
+    <div class="cards-menu">
+        <!-- Tarjeta PYMEs -->
+        <div class="menu-card" onclick="window.location.href='chatbot-pymes-hostinger.html'">
+            <div class="menu-icon"><i class="fas fa-store"></i></div>
+            <span class="badge-perfil badge-pyme">PYMES · Hostinger</span>
+            <h2>Chatbot para Negocios Locales</h2>
+            <p>Clínicas, inmobiliarias, e-commerce. <strong>Modelo por rendimiento</strong> (comisión por venta/lead). Setup desde $4,500 MXN.</p>
+            <button class="btn-menu"><i class="fas fa-arrow-right"></i> Ver planes PYME</button>
+        </div>
+
+        <!-- Tarjeta Intermedio (Nuevo) -->
+        <div class="menu-card" onclick="window.location.href='chatbot-intermedio-negocios.html'">
+            <div class="menu-icon"><i class="fas fa-chart-line"></i></div>
+            <span class="badge-perfil badge-intermedio">NEGOCIOS EN CRECIMIENTO</span>
+            <h2>Chatbot Profesional</h2>
+            <p>Restaurantes, gimnasios, franquicias, centros de servicio. <strong>Soporte multicanal + analítica avanzada</strong>. Setup desde $15,000 MXN.</p>
+            <button class="btn-menu"><i class="fas fa-arrow-right"></i> Ver planes intermedios</button>
+        </div>
+
+        <!-- Tarjeta Empresarial -->
+        <div class="menu-card" onclick="window.location.href='chatbot-empresarial-oci.html'">
+            <div class="menu-icon"><i class="fas fa-building"></i></div>
+            <span class="badge-perfil badge-empresarial">EMPRESARIAL · OCI</span>
+            <h2>Chatbot Corporativo</h2>
+            <p>Bancos, gobierno, retail masivo. <strong>Arquitectura en Oracle Cloud</strong> con GPU, fine-tuning, cumplimiento LFPDPPP. Setup desde $95,000 MXN.</p>
+            <button class="btn-menu"><i class="fas fa-arrow-right"></i> Ver solución Enterprise</button>
+        </div>
+    </div>
+    <div class="footer-menu">
+        <i class="fas fa-shield-alt"></i> Todos los niveles incluyen RAG con los mejores LLMs (Gemini, GPT, DeepSeek) · Seguridad y escalabilidad
+    </div>
+</div>
+<script>
+    // Si se desea efecto adicional
+    console.log("ECOTEC Data Solutions · Menú principal · Chatbots para PYMEs, Negocios en crecimiento y Empresas");
+</script>
+</body>
+</html>
