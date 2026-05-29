@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Chatbot WhatsApp | ECOTEC Data Solutions</title>
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #075e54;
+            --primary-light: #128c7e;
+            --accent: #25d366;
+            --accent-soft: #dcf8c6;
+            --text: #333;
+            --text-muted: #666;
+            --bg: #f4f4f6;
+            --card-bg: #fff;
+            --border: #e0e0e0;
+            --radius: 12px;
+            --shadow: 0 4px 24px rgba(0, 0, 0, .06);
+            --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 1.5rem;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 2rem auto;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 3rem 2.5rem;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: var(--accent-soft);
+            color: #1b5e20;
+            font-size: .75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            padding: .35rem 1rem;
+            border-radius: 100px;
+            margin-bottom: 1.25rem;
+        }
+
+        .badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.25;
+            margin-bottom: .25rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: .95rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .last-updated {
+            display: block;
+            margin-top: .35rem;
+            font-size: .82rem;
+            color: var(--text-muted);
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            margin: 2rem 0 .75rem;
+            padding-top: .5rem;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 1.5rem 0 .5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin: .5rem 0 1.25rem 1.5rem;
+        }
+
+        li {
+            margin-bottom: .4rem;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        /* Data table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: .92rem;
+        }
+
+        .data-table th,
+        .data-table td {
+            text-align: left;
+            padding: .75rem 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-table th {
+            background: #f9fafb;
+            font-weight: 600;
+            color: var(--text);
+            font-size: .82rem;
+            text-transform: uppercase;
+            letter-spacing: .03em;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Highlight boxes */
+        .highlight {
+            background: #f0fdf4;
+            border-left: 4px solid var(--accent);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 1.25rem 0;
+        }
+
+        .highlight--warn {
+            background: #fff7ed;
+            border-left-color: #f97316;
+        }
+
+        .highlight--info {
+            background: #eff6ff;
+            border-left-color: #3b82f6;
+        }
+
+        .highlight p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight__title {
+            font-weight: 600;
+            font-size: .9rem;
+            text-transform: uppercase;
+            letter-spacing: .03em;
+            margin-bottom: .35rem;
+        }
+
+        /* Contact card */
+        .contact-card {
+            background: #f9fafb;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem 3rem;
+        }
+
+        .contact-card__item {
+            display: flex;
+            flex-direction: column;
+            gap: .15rem;
+        }
+
+        .contact-card__label {
+            font-size: .78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            color: var(--text-muted);
+        }
+
+        .contact-card__value {
+            font-size: 1rem;
+            color: var(--primary-light);
+            font-weight: 500;
+        }
+
+        .contact-card__value a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .contact-card__value a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: .82rem;
+            color: var(--text-muted);
+        }
+
+        .footer strong {
+            color: var(--text);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            body {
+                padding: .75rem;
+            }
+
+            .container {
+                padding: 1.5rem 1.25rem;
+                margin: .5rem auto;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+            }
+
+            .data-table {
+                font-size: .82rem;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: .5rem .6rem;
+            }
+
+            .contact-card {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1.25rem;
+            }
+
+            .highlight {
+                padding: 1rem 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem .9rem;
+            }
+
+            .data-table thead {
+                display: none;
+            }
+
+            .data-table tr {
+                display: block;
+                padding: .75rem 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .data-table td {
+                display: block;
+                padding: .15rem 0;
+                border: none;
+            }
+
+            .data-table td::before {
+                content: attr(data-label);
+                font-weight: 600;
+                display: inline-block;
+                width: 110px;
+                font-size: .78rem;
+                text-transform: uppercase;
+                color: var(--text-muted);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="badge">Política de Privacidad</div>
+    <h1>Privacidad del Chatbot<br>de WhatsApp Business</h1>
+    <p class="subtitle">
+        ECOTEC Data Solutions &mdash; Transparencia y control de tus datos.
+        <span class="last-updated">Última actualización: 29 de mayo de 2026</span>
+    </p>
+
+    <!-- Intro -->
+    <p>
+        En <strong>ECOTEC Data Solutions</strong> valoramos tu privacidad. Esta política explica
+        qué datos recopila nuestro chatbot de WhatsApp Business, con qué finalidad los usamos,
+        cómo puedes ejercer tus derechos y de qué manera darte de baja en cualquier momento.
+        Al utilizar este chatbot aceptas los términos descritos a continuación.
+    </p>
+
+    <!-- 1. Consentimiento -->
+    <h2>1. Consentimiento (Opt-in)</h2>
+    <p>
+        Al enviar tu primer mensaje a nuestro chatbot de WhatsApp Business,
+        <strong>estás otorgando tu consentimiento expreso, libre, informado e inequívoco</strong>
+        para que ECOTEC Data Solutions:
+    </p>
+    <ul>
+        <li>Te envíe comunicaciones y respuestas automatizadas a través de WhatsApp.</li>
+        <li>Procese tu número de teléfono, el contenido de tus mensajes y cualquier otra
+            información que proporciones voluntariamente (como tu nombre o URLs).</li>
+        <li>Almacene el historial de la conversación con el único propósito de operar el chatbot
+            y mejorar la precisión de nuestro sistema RAG (<em>Retrieval-Augmented Generation</em>).</li>
+    </ul>
+    <div class="highlight">
+        <p class="highlight__title">Tu decisión importa</p>
+        <p>El consentimiento es voluntario. Si no estás de acuerdo, por favor no inicies
+        una conversación con el chatbot o escribe <strong>BAJA</strong> para cancelarlo
+        en cualquier momento.</p>
+    </div>
+
+    <!-- 2. Bajas -->
+    <h2>2. Cancelación o baja (Opt-out)</h2>
+    <p>
+        Puedes revocar tu consentimiento y darte de baja del servicio en cualquier momento.
+        Solo debes enviar una de las siguientes palabras clave a través del chat:
+    </p>
+    <ul>
+        <li><strong>BAJA</strong></li>
+        <li><strong>STOP</strong></li>
+        <li><strong>CANCELAR</strong></li>
+        <li><strong>BAJA TODO</strong></li>
+    </ul>
+    <div class="highlight highlight--warn">
+        <p class="highlight__title">¿Qué ocurre al darte de baja?</p>
+        <p>Tu número de teléfono será eliminado de nuestra lista de contactos activos
+        y dejarás de recibir cualquier comunicación a través del chatbot.
+        El historial previo de la conversación podrá conservarse de forma anonimizada
+        con fines exclusivos de mejora del sistema RAG, sin asociación directa a tu identidad.</p>
+    </div>
+
+    <!-- 3. Datos recopilados -->
+    <h2>3. Datos que recopilamos</h2>
+    <p>El chatbot recopila únicamente la información necesaria para funcionar y responder
+    a tus consultas. A continuación detallamos cada tipo de dato, su origen y su finalidad:</p>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Dato</th>
+                <th>Origen</th>
+                <th>Finalidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Dato"><strong>Número de teléfono</strong></td>
+                <td data-label="Origen">WhatsApp (proporcionado al iniciar el chat)</td>
+                <td data-label="Finalidad">Identificarte y enviarte respuestas</td>
+            </tr>
+            <tr>
+                <td data-label="Dato"><strong>Nombre</strong> (si lo proporcionas)</td>
+                <td data-label="Origen">Lo escribes voluntariamente en la conversación</td>
+                <td data-label="Finalidad">Personalizar la atención</td>
+            </tr>
+            <tr>
+                <td data-label="Dato"><strong>Historial de mensajes</strong></td>
+                <td data-label="Origen">Conversación con el chatbot</td>
+                <td data-label="Finalidad">Responder consultas y alimentar el sistema RAG</td>
+            </tr>
+            <tr>
+                <td data-label="Dato"><strong>URLs</strong> (si las compartes)</td>
+                <td data-label="Origen">Las envías voluntariamente en el chat</td>
+                <td data-label="Finalidad">Procesar contexto adicional para tus consultas</td>
+            </tr>
+            <tr>
+                <td data-label="Dato"><strong>Metadatos de la conversación</strong></td>
+                <td data-label="Origen">Generados por la interacción</td>
+                <td data-label="Finalidad">Estadísticas anónimas de uso y mejora del servicio</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="highlight highlight--info">
+        <p class="highlight__title">Transparencia sobre el sistema RAG</p>
+        <p>Nuestro chatbot utiliza un sistema RAG (<em>Retrieval-Augmented Generation</em>).
+        Esto significa que tus preguntas se comparan con una base de datos documental interna
+        que <strong>no contiene datos personales de los usuarios</strong>. El historial de la
+        conversación se almacena de forma segura y se usa exclusivamente para mejorar la
+        relevancia y precisión de las respuestas futuras.</p>
+    </div>
+
+    <!-- 4. Uso de datos -->
+    <h2>4. Uso de los datos</h2>
+    <p>Los datos recopilados se utilizan <strong>única y exclusivamente</strong> para:</p>
+    <ul>
+        <li>Operar y mantener el chatbot de atención al cliente.</li>
+        <li>Responder a tus consultas y solicitudes de información sobre los servicios de
+            ECOTEC Data Solutions.</li>
+        <li>Mejorar la precisión y calidad de las respuestas del sistema RAG mediante el
+            análisis anonimizado del historial de conversaciones.</li>
+        <li>Cumplir con obligaciones legales y regulatorias aplicables.</li>
+    </ul>
+    <p>
+        <strong>Bajo ninguna circunstancia</strong> compartiremos, venderemos o cederemos tus
+        datos personales a terceros con fines de marketing, publicidad o prospección comercial.
+        No utilizamos tus datos para elaborar perfiles comerciales ni para toma de decisiones
+        automatizadas que te afecten de forma significativa.
+    </p>
+
+    <!-- 5. Contacto -->
+    <h2>5. Contacto y ejercicio de derechos</h2>
+    <p>
+        De conformidad con la normativa vigente en protección de datos personales
+        (Ley Federal de Protección de Datos Personales en Posesión de los Particulares,
+        RGPD si aplica, y demás legislación aplicable), tienes derecho a:
+    </p>
+    <ul>
+        <li><strong>Acceder</strong> a los datos personales que tenemos sobre ti.</li>
+        <li><strong>Rectificar</strong> cualquier dato inexacto o incompleto.</li>
+        <li><strong>Cancelar</strong> (suprimir) tus datos personales de nuestras bases.</li>
+        <li><strong>Oponerte</strong> al tratamiento de tus datos.</li>
+        <li><strong>Revocar</strong> tu consentimiento en cualquier momento.</li>
+    </ul>
+    <p>
+        Para ejercer cualquiera de estos derechos, o si tienes dudas sobre esta política,
+        escríbenos a:
+    </p>
+
+    <div class="contact-card">
+        <div class="contact-card__item">
+            <span class="contact-card__label">Correo electrónico</span>
+            <span class="contact-card__value"><a href="ecotec.data.solutions@gmail.com">ecotec.data.solutions@gmail.com</a></span>
+        </div>
+        <div class="contact-card__item">
+            <span class="contact-card__label">Tiempo de respuesta</span>
+            <span class="contact-card__value">Máximo 15 días hábiles</span>
+        </div>
+        <div class="contact-card__item">
+            <span class="contact-card__label">Empresa responsable</span>
+            <span class="contact-card__value">ECOTEC Data Solutions</span>
+        </div>
+    </div>
+
+    <p>También puedes enviar la palabra <strong>BAJA</strong> directamente por WhatsApp
+    para ejercer tu derecho de cancelación de forma inmediata.</p>
+
+    <!-- 6. Seguridad -->
+    <h2>6. Seguridad y retención de datos</h2>
+    <p>
+        Implementamos medidas de seguridad técnicas, administrativas y físicas para proteger
+        tus datos personales contra acceso no autorizado, pérdida, destrucción o uso indebido.
+        Los datos se conservarán únicamente durante el tiempo necesario para cumplir con las
+        finalidades descritas en esta política, y hasta que ejerzas tu derecho de cancelación
+        o solicites la baja del servicio.
+    </p>
+
+    <!-- 7. Actualizaciones -->
+    <h2>7. Cambios a esta política</h2>
+    <p>
+        Podemos actualizar esta política de privacidad periódicamente. Te notificaremos cualquier
+        cambio sustancial a través del propio chatbot o por los medios de contacto que hayas
+        proporcionado. Te recomendamos revisar esta página de vez en cuando para mantenerte
+        informado.
+    </p>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2026 <strong>ECOTEC Data Solutions</strong> &mdash; Todos los derechos reservados.
+        <br>
+        Si prefieres no utilizar el chatbot, puedes contactarnos directamente por correo electrónico
+        en <a href="mailto:ecotec.data.solutions@gmail.com">ecotec.data.solutions@gmail.com</a>.
+    </div>
+
+</div>
+
+</body>
+</html>
